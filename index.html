@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invest In Her — A Financial Roadmap for Young Women</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Shantell+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ───────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --bg:        #fce8f0;
+  --bg-light:  #fff0f7;
+  --white:     #ffffff;
+  --pink-hot:  #e8529a;
+  --pink-mid:  #f07cb8;
+  --pink-soft: #f9b8d8;
+  --pink-pale: #fdd8eb;
+  --pink-box:  #f5aed0;
+  --text-main: #d63a85;
+  --text-dark: #b02270;
+  --text-body: #c84a8a;
+}
+
+body {
+  font-family: 'Shantell Sans', cursive;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 50% 50%,
+      rgba(255,255,255,0.18) 0 28%, transparent 28% 50%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cpath d='M45 10 C25 10 10 25 10 45 C10 65 25 80 45 80 C65 80 80 65 80 45 C80 25 65 10 45 10Z' fill='none' stroke='%23f0a0cc' stroke-width='1.2' opacity='0.45'/%3E%3C/svg%3E");
+  background-size: 90px 90px;
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* ── DECORATIVE SVG COMPONENTS ──────────────────── */
+.deco { position: absolute; pointer-events: none; user-select: none; }
+
+/* ── NAV ────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(252,232,240,0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--pink-soft);
+  padding: 0 2.5rem;
+  height: 62px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-title {
+  font-family: 'Carter One', cursive;
+  font-size: 1.6rem;
+  color: var(--pink-hot);
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #fff, 3px 3px 0 var(--pink-soft);
+}
+.nav-links { display: flex; gap: 1.8rem; list-style: none; }
+.nav-links a {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-body);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--pink-hot); }
+
+/* ── SCALLOPED BOX ──────────────────────────────── */
+.scallop {
+  background: var(--white);
+  border-radius: 50% 50% 50% 50% / 8% 8% 8% 8%;
+  /* SVG clip-path gives real scallop */
+  clip-path: url(#scallop-clip);
+  position: relative;
+}
+
+/* We use a border-radius trick instead since clip-path can't be set per-element easily */
+/* Scalloped via filter + box approach */
+.card-scallop {
+  background: var(--white);
+  position: relative;
+  padding: 2.5rem 2rem 2rem;
+}
+.card-scallop::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  background: var(--white);
+  border-radius: 60px;
+  z-index: -1;
+  filter: drop-shadow(0 4px 18px rgba(230,80,150,0.12));
+}
+/* True scalloped edge using radial-gradient mask */
+.scallop-box {
+  position: relative;
+  background: var(--white);
+  padding: 2.5rem 2.25rem 2rem;
+  filter: drop-shadow(0 6px 24px rgba(230,80,150,0.13));
+}
+.scallop-box::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: var(--white);
+  z-index: -1;
+}
+/* Mask approach for real scallops */
+.scallop-mask {
+  background: var(--white);
+  padding: 2.5rem 2.25rem 2rem;
+  border-radius: 3rem;
+  position: relative;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' preserveAspectRatio='none'%3E%3Cpath d='M10,10 Q15,0 20,10 Q25,20 30,10 Q35,0 40,10 Q45,20 50,10 Q55,0 60,10 Q65,20 70,10 Q75,0 80,10 Q85,20 90,10 Q95,0 100,10 Q105,20 110,10 Q115,0 120,10 Q125,20 130,10 Q135,0 140,10 Q145,20 150,10 Q155,0 160,10 Q165,20 170,10 Q175,0 180,10 Q185,20 190,10 L190,190 Q185,200 180,190 Q175,180 170,190 Q165,200 160,190 Q155,180 150,190 Q145,200 140,190 Q135,180 130,190 Q125,200 120,190 Q115,180 110,190 Q105,200 100,190 Q95,180 90,190 Q85,200 80,190 Q75,180 70,190 Q65,200 60,190 Q55,180 50,190 Q45,200 40,190 Q35,180 30,190 Q25,200 20,190 Q15,180 10,190 Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' preserveAspectRatio='none'%3E%3Cpath d='M10,10 Q15,0 20,10 Q25,20 30,10 Q35,0 40,10 Q45,20 50,10 Q55,0 60,10 Q65,20 70,10 Q75,0 80,10 Q85,20 90,10 Q95,0 100,10 Q105,20 110,10 Q115,0 120,10 Q125,20 130,10 Q135,0 140,10 Q145,20 150,10 Q155,0 160,10 Q165,20 170,10 Q175,0 180,10 Q185,20 190,10 L190,190 Q185,200 180,190 Q175,180 170,190 Q165,200 160,190 Q155,180 150,190 Q145,200 140,190 Q135,180 130,190 Q125,200 120,190 Q115,180 110,190 Q105,200 100,190 Q95,180 90,190 Q85,200 80,190 Q75,180 70,190 Q65,200 60,190 Q55,180 50,190 Q45,200 40,190 Q35,180 30,190 Q25,200 20,190 Q15,180 10,190 Z' fill='black'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+}
+
+/* ── SECTIONS ───────────────────────────────────── */
+.page-section {
+  min-height: 100vh;
+  padding: 7rem 4rem 5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.page-section.alt { background: rgba(255,240,250,0.5); }
+
+/* ── HERO ───────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+}
+.hero-cloud {
+  background: var(--white);
+  border-radius: 60px;
+  padding: 4rem 5rem 3.5rem;
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 8px 32px rgba(230,80,150,0.15));
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='none'%3E%3Cpath d='M20,20 Q25,10 30,20 Q35,30 40,20 Q45,10 50,20 Q55,30 60,20 Q65,10 70,20 Q75,30 80,20 Q85,10 90,20 Q95,30 100,20 Q105,10 110,20 Q115,30 120,20 Q125,10 130,20 Q135,30 140,20 Q145,10 150,20 Q155,30 160,20 Q165,10 170,20 Q175,30 180,20 Q185,10 190,20 Q195,30 200,20 Q205,10 210,20 Q215,30 220,20 Q225,10 230,20 Q235,30 240,20 Q245,10 250,20 Q255,30 260,20 Q265,10 270,20 Q275,30 280,20 Q285,10 290,20 Q295,30 300,20 Q305,10 310,20 Q315,30 320,20 Q325,10 330,20 Q335,30 340,20 Q345,10 350,20 Q355,30 360,20 Q365,10 370,20 Q375,30 380,20 L380,280 Q375,290 370,280 Q365,270 360,280 Q355,290 350,280 Q345,270 340,280 Q335,290 330,280 Q325,270 320,280 Q315,290 310,280 Q305,270 300,280 Q295,290 290,280 Q285,270 280,280 Q275,290 270,280 Q265,270 260,280 Q255,290 250,280 Q245,270 240,280 Q235,290 230,280 Q225,270 220,280 Q215,290 210,280 Q205,270 200,280 Q195,290 190,280 Q185,270 180,280 Q175,290 170,280 Q165,270 160,280 Q155,290 150,280 Q145,270 140,280 Q135,290 130,280 Q125,270 120,280 Q115,290 110,280 Q105,270 100,280 Q95,290 90,280 Q85,270 80,280 Q75,290 70,280 Q65,270 60,280 Q55,290 50,280 Q45,270 40,280 Q35,290 30,280 Q25,270 20,280 Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' preserveAspectRatio='none'%3E%3Cpath d='M20,20 Q25,10 30,20 Q35,30 40,20 Q45,10 50,20 Q55,30 60,20 Q65,10 70,20 Q75,30 80,20 Q85,10 90,20 Q95,30 100,20 Q105,10 110,20 Q115,30 120,20 Q125,10 130,20 Q135,30 140,20 Q145,10 150,20 Q155,30 160,20 Q165,10 170,20 Q175,30 180,20 Q185,10 190,20 Q195,30 200,20 Q205,10 210,20 Q215,30 220,20 Q225,10 230,20 Q235,30 240,20 Q245,10 250,20 Q255,30 260,20 Q265,10 270,20 Q275,30 280,20 Q285,10 290,20 Q295,30 300,20 Q305,10 310,20 Q315,30 320,20 Q325,10 330,20 Q335,30 340,20 Q345,10 350,20 Q355,30 360,20 Q365,10 370,20 Q375,30 380,20 L380,280 Q375,290 370,280 Q365,270 360,280 Q355,290 350,280 Q345,270 340,280 Q335,290 330,280 Q325,270 320,280 Q315,290 310,280 Q305,270 300,280 Q295,290 290,280 Q285,270 280,280 Q275,290 270,280 Q265,270 260,280 Q255,290 250,280 Q245,270 240,280 Q235,290 230,280 Q225,270 220,280 Q215,290 210,280 Q205,270 200,280 Q195,290 190,280 Q185,270 180,280 Q175,290 170,280 Q165,270 160,280 Q155,290 150,280 Q145,270 140,280 Q135,290 130,280 Q125,270 120,280 Q115,290 110,280 Q105,270 100,280 Q95,290 90,280 Q85,270 80,280 Q75,290 70,280 Q65,270 60,280 Q55,290 50,280 Q45,270 40,280 Q35,290 30,280 Q25,270 20,280 Z' fill='black'/%3E%3C/svg%3E");
+  mask-size: 100% 100%;
+}
+.hero-title {
+  font-family: 'Carter One', cursive;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  color: var(--pink-hot);
+  text-shadow: 3px 3px 0 var(--pink-pale), 5px 5px 0 var(--pink-soft);
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+.hero-sub {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 1.25rem;
+  color: var(--text-body);
+  font-weight: 500;
+  margin-top: 0.5rem;
+  background: var(--pink-pale);
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 100px;
+  margin-top: 1.5rem;
+}
+.hero-nav-pills {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+  margin-top: 2.5rem;
+}
+.pill {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: var(--pink-hot);
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.15s, background 0.2s;
+  display: inline-block;
+}
+.pill:hover { background: var(--text-dark); transform: translateY(-2px); }
+
+/* ── SECTION TITLE ──────────────────────────────── */
+.section-heading {
+  font-family: 'Carter One', cursive;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  color: var(--pink-hot);
+  text-align: center;
+  text-shadow: 2px 2px 0 var(--pink-pale), 4px 4px 0 var(--pink-soft);
+  margin-bottom: 3rem;
+  position: relative; z-index: 2;
+}
+
+/* ── CONTENT WRAPPER ────────────────────────────── */
+.content-wrap {
+  max-width: 1100px;
+  width: 100%;
+  position: relative; z-index: 2;
+}
+
+/* ── CONTENT BOXES (scalloped white) ────────────── */
+.content-box {
+  background: var(--white);
+  border-radius: 2.5rem;
+  padding: 2.5rem 2.25rem;
+  position: relative;
+  filter: drop-shadow(0 6px 20px rgba(230,80,150,0.12));
+  /* Scallop via outline + box-shadow trick */
+  outline: 14px solid var(--pink-pale);
+  outline-offset: -14px;
+}
+/* Pink variant */
+.content-box.pink-bg {
+  background: var(--pink-pale);
+  outline-color: var(--pink-soft);
+}
+
+/* ── GRID LAYOUTS ───────────────────────────────── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem; }
+.four-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+
+/* ── BULLET LIST ────────────────────────────────── */
+.fancy-list { list-style: none; padding: 0; margin-top: 0.75rem; }
+.fancy-list li {
+  font-size: 1rem;
+  color: var(--text-body);
+  padding: 6px 0 6px 1.75rem;
+  position: relative;
+  line-height: 1.5;
+}
+.fancy-list li::before {
+  content: '•';
+  position: absolute; left: 0;
+  color: var(--pink-hot);
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+/* ── BOX TITLE ──────────────────────────────────── */
+.box-title {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-decoration: underline;
+  text-decoration-color: var(--pink-hot);
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* ── STAT CARDS ─────────────────────────────────── */
+.stat-card {
+  background: var(--pink-pale);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+.stat-num {
+  font-family: 'Carter One', cursive;
+  font-size: 2.4rem;
+  color: var(--pink-hot);
+  line-height: 1;
+}
+.stat-label { font-size: 0.9rem; color: var(--text-body); margin-top: 6px; line-height: 1.4; }
+
+/* ── NUMBER BADGES ──────────────────────────────── */
+.num-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 52px; height: 52px;
+  background: var(--pink-hot);
+  color: white;
+  font-family: 'Carter One', cursive;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-bottom: 0.75rem;
+}
+/* Scalloped badge (like the slides) */
+.scallop-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 56px; height: 56px;
+  background: var(--pink-pale);
+  color: var(--pink-hot);
+  font-family: 'Carter One', cursive;
+  font-size: 1.4rem;
+  clip-path: polygon(50% 0%, 61% 11%, 76% 6%, 79% 21%, 93% 25%, 89% 40%, 100% 50%, 89% 60%, 93% 75%, 79% 79%, 76% 94%, 61% 89%, 50% 100%, 39% 89%, 24% 94%, 21% 79%, 7% 75%, 11% 60%, 0% 50%, 11% 40%, 7% 25%, 21% 21%, 24% 6%, 39% 11%);
+  flex-shrink: 0;
+  margin-bottom: 0.75rem;
+}
+
+/* ── STEP CARD ──────────────────────────────────── */
+.step-card {
+  background: var(--white);
+  border-radius: 2rem;
+  padding: 2rem 1.75rem;
+  outline: 10px solid var(--pink-pale);
+  outline-offset: -10px;
+  filter: drop-shadow(0 4px 14px rgba(230,80,150,0.1));
+  display: flex; flex-direction: column;
+}
+.step-card h3 {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+}
+.step-card p, .step-card li { font-size: 0.95rem; color: var(--text-body); line-height: 1.55; }
+
+/* ── INVEST CARD ─────────────────────────────────── */
+.invest-card {
+  background: var(--white);
+  border-radius: 2rem;
+  padding: 1.75rem;
+  outline: 10px solid var(--pink-pale);
+  outline-offset: -10px;
+  filter: drop-shadow(0 4px 14px rgba(230,80,150,0.1));
+  transition: transform 0.2s;
+}
+.invest-card:hover { transform: translateY(-4px); }
+.invest-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.invest-card h3 {
+  font-family: 'Shantell Sans', cursive;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--text-dark); margin-bottom: 0.5rem;
+}
+.invest-card p { font-size: 0.9rem; color: var(--text-body); line-height: 1.55; }
+.invest-tag {
+  display: inline-block; margin-top: 0.75rem;
+  background: var(--pink-pale); color: var(--text-dark);
+  font-size: 0.78rem; font-weight: 600;
+  padding: 4px 12px; border-radius: 100px;
+}
+
+/* ── DONUT CHART ────────────────────────────────── */
+.chart-wrap { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.legend-item {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.95rem; color: var(--text-body); margin-bottom: 8px;
+}
+.legend-dot { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
+
+/* ── BAR CHART ──────────────────────────────────── */
+.bar-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.bar-label { font-size: 0.9rem; color: var(--text-body); min-width: 80px; }
+.bar-track { flex: 1; height: 22px; background: var(--pink-pale); border-radius: 100px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 100px; }
+.bar-pct { font-size: 0.9rem; font-weight: 700; color: var(--text-dark); min-width: 36px; text-align: right; }
+
+/* ── COMPOUND CHART ─────────────────────────────── */
+.compound-bars { display: flex; align-items: flex-end; gap: 12px; height: 180px; }
+.comp-col { flex: 1; display: flex; flex-direction: column; align-items: center; }
+.comp-bar-wrap { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 1; }
+.comp-bar { width: 56px; border-radius: 8px 8px 0 0; }
+.comp-year { font-size: 0.8rem; color: var(--text-body); margin-top: 6px; }
+.comp-total { font-size: 0.78rem; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+
+/* ── TIMELINE ───────────────────────────────────── */
+.timeline { display: flex; flex-direction: column; gap: 0; position: relative; padding-left: 2.5rem; }
+.timeline::before {
+  content: ''; position: absolute;
+  left: 20px; top: 20px; bottom: 20px; width: 2px;
+  background: var(--pink-soft);
+}
+.tl-item { display: flex; gap: 1.25rem; align-items: flex-start; padding-bottom: 2rem; position: relative; }
+.tl-dot {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--pink-hot); color: white;
+  font-family: 'Carter One', cursive; font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; position: absolute; left: -2.5rem; z-index: 1;
+}
+.tl-dot.soft { background: var(--pink-soft); color: var(--text-dark); }
+.tl-body h5 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+.tl-body p { font-size: 0.9rem; color: var(--text-body); line-height: 1.5; }
+.tl-amount { font-family: 'Carter One', cursive; font-size: 1.1rem; color: var(--pink-hot); }
+
+/* ── DIVIDER ────────────────────────────────────── */
+.pink-divider {
+  width: 100%; height: 2px;
+  background: linear-gradient(to right, transparent, var(--pink-soft), transparent);
+  margin: 1.5rem 0;
+}
+
+/* ── RIBBON BANNER ──────────────────────────────── */
+.ribbon {
+  display: inline-block;
+  background: var(--pink-pale);
+  padding: 8px 32px;
+  position: relative;
+  font-family: 'Shantell Sans', cursive;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-body);
+  margin: 0 auto 1.5rem;
+}
+.ribbon::before, .ribbon::after {
+  content: '';
+  position: absolute; top: 0; bottom: 0;
+  width: 18px;
+  background: var(--pink-soft);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.ribbon::before { right: 100%; }
+.ribbon::after { left: 100%; transform: scaleX(-1); }
+
+/* ── CALLOUT BOX ────────────────────────────────── */
+.callout {
+  background: linear-gradient(135deg, var(--pink-pale), #eeddf7);
+  border-radius: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  margin-top: 1.5rem;
+  border-left: 4px solid var(--pink-hot);
+}
+.callout p { font-size: 0.95rem; color: var(--text-body); line-height: 1.6; }
+.callout strong { color: var(--text-dark); }
+
+/* ── DECORATIVE ELEMENTS ─────────────────────────── */
+/* Bow SVG */
+.deco-bow { width: 160px; opacity: 0.9; }
+.deco-butterfly { width: 90px; opacity: 0.85; }
+.deco-flower { width: 60px; opacity: 0.9; }
+
+/* ── SECTION BG ACCENTS ─────────────────────────── */
+.page-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255,220,240,0.4) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255,220,240,0.35) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ── ACCOUNT CARD ───────────────────────────────── */
+.account-card {
+  background: var(--white);
+  border-radius: 1.75rem;
+  padding: 1.5rem;
+  outline: 8px solid var(--pink-pale);
+  outline-offset: -8px;
+  display: flex; gap: 1rem; align-items: flex-start;
+  filter: drop-shadow(0 3px 10px rgba(230,80,150,0.09));
+  margin-bottom: 1.25rem;
+}
+.account-icon { font-size: 2rem; flex-shrink: 0; padding-top: 2px; }
+.account-card h4 { font-family: 'Shantell Sans', cursive; font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
+.account-card p { font-size: 0.88rem; color: var(--text-body); line-height: 1.5; }
+.account-tag {
+  display: inline-block; margin-top: 8px;
+  background: var(--pink-pale); color: var(--text-dark);
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.5px;
+  padding: 3px 10px; border-radius: 100px;
+}
+
+/* ── FOOTER ─────────────────────────────────────── */
+footer {
+  background: var(--pink-hot);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.foot-title {
+  font-family: 'Carter One', cursive;
+  font-size: 2rem;
+  text-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+  margin-bottom: 0.5rem;
+}
+footer p { font-size: 0.9rem; opacity: 0.85; line-height: 1.6; }
+footer .foot-links { display: flex; justify-content: center; gap: 2rem; margin-top: 1.25rem; flex-wrap: wrap; list-style: none; }
+footer .foot-links a { color: var(--pink-pale); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+footer .foot-links a:hover { color: white; }
+
+/* ── RESPONSIVE ─────────────────────────────────── */
+@media (max-width: 860px) {
+  .page-section { padding: 6rem 1.75rem 4rem; }
+  .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+  .hero-cloud { padding: 3rem 2rem 2.5rem; }
+  nav .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ───────────────────────────────────────── -->
+<nav>
+  <span class="nav-title">🎀 Invest In Her</span>
+  <ul class="nav-links">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#budgeting">Budgeting</a></li>
+    <li><a href="#investing">Investing</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#retirement">Retirement</a></li>
+  </ul>
+</nav>
+
+<!-- ══════════════════════════════════════════════ -->
+<!--  HERO                                          -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="hero" class="page-section" style="text-align:center;">
+
+  <!-- Deco bows + butterflies -->
+  <div class="deco" style="top:8%; left:2%; animation: floatA 5s ease-in-out infinite;">
+    <svg class="deco-bow" viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.9">
+        <!-- Left wing -->
+        <path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/>
+        <path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/>
+        <!-- Right wing -->
+        <path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/>
+        <path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/>
+        <!-- Center knot -->
+        <circle cx="90" cy="70" r="10" fill="#e8529a"/>
+        <!-- Tails -->
+        <path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- Flower spots -->
+        <circle cx="45" cy="45" r="4" fill="#e8529a" opacity="0.5"/>
+        <circle cx="65" cy="35" r="3" fill="#e8529a" opacity="0.4"/>
+        <circle cx="55" cy="90" r="3.5" fill="#e8529a" opacity="0.45"/>
+        <circle cx="130" cy="48" r="4" fill="#e8529a" opacity="0.5"/>
+        <circle cx="112" cy="38" r="3" fill="#e8529a" opacity="0.4"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="deco" style="top:5%; right:3%; animation: floatB 4.5s ease-in-out infinite;">
+    <svg class="deco-butterfly" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/>
+      <path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/>
+      <path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/>
+      <path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/>
+      <circle cx="50" cy="40" r="4" fill="#e8529a"/>
+      <path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Bottom left butterfly -->
+  <div class="deco" style="bottom:10%; left:3%; animation: floatA 6s ease-in-out infinite 1s;">
+    <svg class="deco-butterfly" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/>
+      <path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/>
+      <path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/>
+      <path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/>
+      <circle cx="50" cy="40" r="4" fill="#e8529a"/>
+      <path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Flowers -->
+  <div class="deco" style="top:18%; left:42%; animation: floatB 3.5s ease-in-out infinite 0.5s;">
+    <svg class="deco-flower" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="30" cy="30" r="8" fill="#e8529a"/>
+      <ellipse cx="30" cy="12" rx="7" ry="10" fill="#f9b8d8"/>
+      <ellipse cx="30" cy="48" rx="7" ry="10" fill="#f9b8d8"/>
+      <ellipse cx="12" cy="30" rx="10" ry="7" fill="#f9b8d8"/>
+      <ellipse cx="48" cy="30" rx="10" ry="7" fill="#f9b8d8"/>
+      <circle cx="30" cy="30" r="5" fill="white"/>
+    </svg>
+  </div>
+
+  <!-- Bottom right bow -->
+  <div class="deco" style="bottom:6%; right:2%; animation: floatB 5.5s ease-in-out infinite 2s;">
+    <svg class="deco-bow" viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/>
+      <path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/>
+      <path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/>
+      <path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/>
+      <circle cx="90" cy="70" r="10" fill="#e8529a"/>
+      <path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="45" cy="45" r="4" fill="#e8529a" opacity="0.5"/>
+      <circle cx="130" cy="48" r="4" fill="#e8529a" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <div class="content-wrap" style="display:flex; flex-direction:column; align-items:center;">
+    <div class="hero-cloud">
+      <h1 class="hero-title">INVEST IN HER</h1>
+      <div style="display:flex; justify-content:center;">
+        <span class="hero-sub">A Financial Roadmap for Young Women</span>
+      </div>
+      <div class="hero-nav-pills">
+        <a href="#mission" class="pill">🌸 Mission</a>
+        <a href="#budgeting" class="pill">💰 Budgeting</a>
+        <a href="#investing" class="pill">📈 Investing</a>
+        <a href="#portfolio" class="pill">🧺 Portfolio</a>
+        <a href="#retirement" class="pill">🏦 Retirement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!--  MISSION                                       -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="mission" class="page-section alt">
+
+  <!-- Deco -->
+  <div class="deco" style="top:6%; left:1%; animation: floatA 5s ease-in-out infinite;">
+    <svg class="deco-bow" viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/>
+      <path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/>
+      <circle cx="90" cy="70" r="10" fill="#e8529a"/>
+      <path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <circle cx="45" cy="45" r="4" fill="#e8529a" opacity="0.5"/><circle cx="65" cy="35" r="3" fill="#e8529a" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="deco" style="top:5%; right:2%; animation: floatB 4s ease-in-out infinite 1s;">
+    <svg class="deco-flower" viewBox="0 0 60 60"><circle cx="30" cy="30" r="8" fill="#e8529a"/><ellipse cx="30" cy="12" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="30" cy="48" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="12" cy="30" rx="10" ry="7" fill="#f9b8d8"/><ellipse cx="48" cy="30" rx="10" ry="7" fill="#f9b8d8"/><circle cx="30" cy="30" r="5" fill="white"/></svg>
+  </div>
+  <div class="deco" style="bottom:8%; left:2%; animation: floatA 6s ease-in-out infinite 2s;">
+    <svg class="deco-butterfly" viewBox="0 0 100 80"><path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><circle cx="50" cy="40" r="4" fill="#e8529a"/><path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+  </div>
+  <div class="deco" style="bottom:5%; right:2%; animation: floatB 5s ease-in-out infinite 0.5s;">
+    <svg class="deco-bow" viewBox="0 0 180 140"><path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/><circle cx="90" cy="70" r="10" fill="#e8529a"/><path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+  </div>
+
+  <div class="content-wrap">
+    <h2 class="section-heading">MISSION</h2>
+    <div class="two-col">
+      <div class="content-box">
+        <div class="box-title">Why It Matters</div>
+        <ul class="fancy-list">
+          <li>Empower young women to take control of their financial futures</li>
+          <li>Break down intimidating financial concepts into approachable steps</li>
+          <li>Promote a structured, long-term investment timeline</li>
+          <li>Generations of women have been underserved by financial education</li>
+          <li>Financial independence for women is both personal and transformative</li>
+        </ul>
+        <div class="pink-divider"></div>
+        <div class="four-col" style="gap:1rem; margin-top:0.5rem;">
+          <div class="stat-card"><div class="stat-num">56%</div><div class="stat-label">of women feel less confident about finances</div></div>
+          <div class="stat-card"><div class="stat-num">3 yrs</div><div class="stat-label">longer women live — more savings needed</div></div>
+          <div class="stat-card"><div class="stat-num">$1.1M</div><div class="stat-label">lifetime earnings gap women face</div></div>
+          <div class="stat-card"><div class="stat-num">2×</div><div class="stat-label">women who invest grow wealth twice as fast</div></div>
+        </div>
+      </div>
+      <div class="content-box pink-bg">
+        <div class="box-title">What We Believe Every Woman Deserves</div>
+        <ul class="fancy-list">
+          <li><strong>Clear, jargon-free education</strong> — finance speak should never be a barrier</li>
+          <li><strong>Confidence to take action</strong> — practical frameworks and real, doable steps</li>
+          <li><strong>A supportive community</strong> — women lifting each other up financially</li>
+          <li><strong>Long-term financial freedom</strong> — a future where money works for you</li>
+          <li><strong>Beginner-friendly graphics</strong> — easy visuals that make concepts click</li>
+        </ul>
+        <div class="callout">
+          <p>Financial literacy for women is often overlooked — but it doesn't have to be. <strong>Starting young is the single most powerful financial move you can make.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!--  BUDGETING                                     -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="budgeting" class="page-section">
+  <div class="deco" style="top:5%; left:1%; animation: floatB 5s ease-in-out infinite;"><svg class="deco-bow" viewBox="0 0 180 140"><path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/><circle cx="90" cy="70" r="10" fill="#e8529a"/><path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><circle cx="45" cy="45" r="4" fill="#e8529a" opacity="0.5"/></svg></div>
+  <div class="deco" style="top:6%; right:2%; animation: floatA 4.5s ease-in-out infinite 1s;"><svg class="deco-butterfly" viewBox="0 0 100 80"><path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><circle cx="50" cy="40" r="4" fill="#e8529a"/><path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="deco" style="bottom:6%; left:2%; animation: floatA 5.5s ease-in-out infinite 2s;"><svg class="deco-flower" viewBox="0 0 60 60"><circle cx="30" cy="30" r="8" fill="#e8529a"/><ellipse cx="30" cy="12" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="30" cy="48" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="12" cy="30" rx="10" ry="7" fill="#f9b8d8"/><ellipse cx="48" cy="30" rx="10" ry="7" fill="#f9b8d8"/><circle cx="30" cy="30" r="5" fill="white"/></svg></div>
+  <div class="deco" style="bottom:5%; right:2%; animation: floatB 5s ease-in-out infinite;"><svg class="deco-bow" viewBox="0 0 180 140"><path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/><circle cx="90" cy="70" r="10" fill="#e8529a"/><path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div>
+
+  <div class="content-wrap">
+    <h2 class="section-heading">BUDGETING</h2>
+    <div class="two-col">
+      <!-- Left: rules -->
+      <div class="content-box">
+        <div class="box-title">The 50/30/20 Rule</div>
+        <ul class="fancy-list">
+          <li><strong>Understand income vs. expenses</strong> — know exactly what comes in and goes out each month</li>
+          <li><strong>Use the 50/30/20 rule</strong> — 50% needs, 30% wants, 20% savings & debt payoff</li>
+          <li><strong>Build spending habits</strong> — track every purchase for one month to find patterns</li>
+          <li><strong>Create an emergency fund</strong> — 3–6 months of expenses in a high-yield savings account</li>
+          <li><strong>Automate savings</strong> — transfer on payday before you can spend it</li>
+        </ul>
+        <div class="pink-divider"></div>
+        <!-- 50/30/20 visual breakdown -->
+        <div style="margin-top:0.5rem;">
+          <div class="bar-row">
+            <span class="bar-label">Needs 🏠</span>
+            <div class="bar-track"><div class="bar-fill" style="width:50%;background:#e8529a;"></div></div>
+            <span class="bar-pct" style="color:#e8529a;">50%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Wants 🛍️</span>
+            <div class="bar-track"><div class="bar-fill" style="width:30%;background:#f07cb8;"></div></div>
+            <span class="bar-pct" style="color:#f07cb8;">30%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">Savings 💰</span>
+            <div class="bar-track"><div class="bar-fill" style="width:20%;background:#b076d4;"></div></div>
+            <span class="bar-pct" style="color:#b076d4;">20%</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right: donut chart -->
+      <div class="content-box pink-bg">
+        <div class="box-title">$3,500/Month Example</div>
+        <div class="chart-wrap" style="flex-direction:column; align-items:center;">
+          <svg viewBox="0 0 240 240" width="220" height="220" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#fdd8eb" stroke-width="34"/>
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#e8529a" stroke-width="34"
+              stroke-dasharray="282.7 565.5" stroke-dashoffset="141.4" transform="rotate(-90 120 120)"/>
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#f07cb8" stroke-width="34"
+              stroke-dasharray="169.6 565.5" stroke-dashoffset="-141.3" transform="rotate(-90 120 120)"/>
+            <circle cx="120" cy="120" r="90" fill="none" stroke="#b076d4" stroke-width="34"
+              stroke-dasharray="113.1 565.5" stroke-dashoffset="-310.9" transform="rotate(-90 120 120)"/>
+            <circle cx="120" cy="120" r="62" fill="white"/>
+            <text x="120" y="113" text-anchor="middle" font-family="Carter One, cursive" font-size="22" fill="#e8529a">$3,500</text>
+            <text x="120" y="133" text-anchor="middle" font-family="Shantell Sans, cursive" font-size="10" fill="#c84a8a">monthly</text>
+          </svg>
+          <div style="margin-top:1rem; width:100%;">
+            <div class="legend-item"><div class="legend-dot" style="background:#e8529a;"></div> Needs — $1,750 (rent, food, bills)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f07cb8;"></div> Wants — $1,050 (dining, shopping, fun)</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#b076d4;"></div> Savings — $700 (invest + emergency fund)</div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:1rem;">
+          <p><strong>Pro tip:</strong> If your Needs bucket exceeds 50%, look for one big expense to reduce — even $100/month frees up $1,200/year.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!--  INVESTING BASICS                              -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="investing" class="page-section alt">
+  <div class="deco" style="top:5%; left:1%; animation: floatA 5s ease-in-out infinite;"><svg class="deco-butterfly" viewBox="0 0 100 80"><path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><circle cx="50" cy="40" r="4" fill="#e8529a"/><path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="deco" style="top:6%; right:2%; animation: floatB 5s ease-in-out infinite 1s;"><svg class="deco-bow" viewBox="0 0 180 140"><path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/><circle cx="90" cy="70" r="10" fill="#e8529a"/><path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="deco" style="bottom:6%; left:3%; animation: floatA 5s ease-in-out infinite 2s;"><svg class="deco-flower" viewBox="0 0 60 60"><circle cx="30" cy="30" r="8" fill="#e8529a"/><ellipse cx="30" cy="12" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="30" cy="48" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="12" cy="30" rx="10" ry="7" fill="#f9b8d8"/><ellipse cx="48" cy="30" rx="10" ry="7" fill="#f9b8d8"/><circle cx="30" cy="30" r="5" fill="white"/></svg></div>
+  <div class="deco" style="bottom:5%; right:2%; animation: floatB 4.5s ease-in-out infinite;"><svg class="deco-butterfly" viewBox="0 0 100 80"><path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><circle cx="50" cy="40" r="4" fill="#e8529a"/><path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+
+  <div class="content-wrap">
+    <h2 class="section-heading">INVESTING BASICS</h2>
+    <div class="content-box" style="margin-bottom:2rem;">
+      <div class="box-title">Key Principles</div>
+      <div class="four-col">
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.5rem;">🌱</div>
+          <div style="font-family:'Shantell Sans',cursive; font-weight:700; color:var(--text-dark); margin-bottom:0.4rem;">Start Early</div>
+          <div style="font-size:0.9rem; color:var(--text-body);">Time in the market beats timing the market. Even $25/week makes a difference.</div>
+        </div>
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.5rem;">⚖️</div>
+          <div style="font-family:'Shantell Sans',cursive; font-weight:700; color:var(--text-dark); margin-bottom:0.4rem;">Risk vs. Return</div>
+          <div style="font-size:0.9rem; color:var(--text-body);">Higher potential returns come with higher risk. Match your risk to your timeline.</div>
+        </div>
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.5rem;">🧺</div>
+          <div style="font-family:'Shantell Sans',cursive; font-weight:700; color:var(--text-dark); margin-bottom:0.4rem;">Diversify</div>
+          <div style="font-size:0.9rem; color:var(--text-body);">Don't put all your eggs in one basket. Spread across asset types and sectors.</div>
+        </div>
+        <div style="text-align:center; padding:1rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.5rem;">🔄</div>
+          <div style="font-family:'Shantell Sans',cursive; font-weight:700; color:var(--text-dark); margin-bottom:0.4rem;">Be Consistent</div>
+          <div style="font-size:0.9rem; color:var(--text-body);">Begin with small, consistent investments. Automate to remove emotion.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Asset Types -->
+    <div class="three-col">
+      <div class="invest-card">
+        <div class="invest-icon">📊</div>
+        <h3>Stocks</h3>
+        <p>Ownership in a company. High long-term returns but more volatile. Best for 10+ year horizons.</p>
+        <span class="invest-tag">Higher risk · Higher reward</span>
+      </div>
+      <div class="invest-card">
+        <div class="invest-icon">🏛️</div>
+        <h3>Bonds</h3>
+        <p>Lending to governments or companies. More stable than stocks, great for balancing a portfolio.</p>
+        <span class="invest-tag">Lower risk · Steady income</span>
+      </div>
+      <div class="invest-card">
+        <div class="invest-icon">🧺</div>
+        <h3>Index Funds & ETFs</h3>
+        <p>Track hundreds of companies at once. Low fees, instant diversification — great for beginners!</p>
+        <span class="invest-tag">Best for beginners ✨</span>
+      </div>
+    </div>
+
+    <!-- Compound Interest Chart -->
+    <div class="content-box pink-bg" style="margin-top:2rem;">
+      <div class="box-title">✨ The Magic of Compound Interest</div>
+      <p style="text-align:center; color:var(--text-body); margin-bottom:1.5rem; font-size:0.95rem;">$200/month at 7% annual return — watch your money grow!</p>
+      <div class="compound-bars" id="compoundBars"></div>
+      <div style="display:flex; gap:1.5rem; margin-top:1rem; flex-wrap:wrap;">
+        <div class="legend-item"><div class="legend-dot" style="background:#f9b8d8;"></div> Your contributions</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e8529a;"></div> Investment growth</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!--  PORTFOLIO                                     -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="portfolio" class="page-section">
+  <div class="deco" style="top:5%; left:1%; animation: floatB 5s ease-in-out infinite;"><svg class="deco-bow" viewBox="0 0 180 140"><path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/><circle cx="90" cy="70" r="10" fill="#e8529a"/><path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="deco" style="top:5%; right:2%; animation: floatA 4.5s ease-in-out infinite 1s;"><svg class="deco-flower" viewBox="0 0 60 60"><circle cx="30" cy="30" r="8" fill="#e8529a"/><ellipse cx="30" cy="12" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="30" cy="48" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="12" cy="30" rx="10" ry="7" fill="#f9b8d8"/><ellipse cx="48" cy="30" rx="10" ry="7" fill="#f9b8d8"/><circle cx="30" cy="30" r="5" fill="white"/></svg></div>
+  <div class="deco" style="bottom:7%; right:2%; animation: floatA 6s ease-in-out infinite;"><svg class="deco-bow" viewBox="0 0 180 140"><path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/><circle cx="90" cy="70" r="10" fill="#e8529a"/><path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div>
+
+  <div class="content-wrap">
+    <h2 class="section-heading">YOUR PORTFOLIO</h2>
+    <div class="two-col" style="margin-bottom:2rem;">
+      <!-- Steps -->
+      <div class="content-box">
+        <div class="box-title">How to Start — 4 Steps</div>
+        <div style="display:flex; flex-direction:column; gap:1.25rem; margin-top:0.5rem;">
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="scallop-badge">01</div>
+            <div><strong style="color:var(--text-dark); font-size:1rem;">Open a brokerage account</strong><br><span style="font-size:0.9rem; color:var(--text-body);">Fidelity, Schwab, or Vanguard — all have zero minimums and great beginner resources.</span></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="scallop-badge">02</div>
+            <div><strong style="color:var(--text-dark); font-size:1rem;">Define your goals & timeline</strong><br><span style="font-size:0.9rem; color:var(--text-body);">Short-term: savings/bonds. Medium: balanced. Long-term (10+ yrs): lean into stocks.</span></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="scallop-badge">03</div>
+            <div><strong style="color:var(--text-dark); font-size:1rem;">Choose your investments</strong><br><span style="font-size:0.9rem; color:var(--text-body);">A simple 3-fund portfolio (US stocks, international, bonds) or a single target-date fund.</span></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <div class="scallop-badge">04</div>
+            <div><strong style="color:var(--text-dark); font-size:1rem;">Automate & contribute regularly</strong><br><span style="font-size:0.9rem; color:var(--text-body);">Dollar-cost averaging — fixed amount every month — removes emotion. Even $50/month matters.</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Pie + allocation -->
+      <div class="content-box pink-bg">
+        <div class="box-title">Starter Portfolio Allocation (Age 20–35)</div>
+        <div style="display:flex; align-items:center; gap:2rem; flex-wrap:wrap; justify-content:center;">
+          <svg viewBox="0 0 220 220" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M110 110 L110 15 A95 95 0 1 1 30 163 Z" fill="#e8529a"/>
+            <path d="M110 110 L30 163 A95 95 0 0 1 88.5 17.8 Z" fill="#b076d4"/>
+            <path d="M110 110 L88.5 17.8 A95 95 0 0 1 110 15 Z" fill="#f07cb8"/>
+            <circle cx="110" cy="110" r="58" fill="white"/>
+            <text x="110" y="104" text-anchor="middle" font-family="Carter One, cursive" font-size="16" fill="#e8529a">Your</text>
+            <text x="110" y="122" text-anchor="middle" font-family="Carter One, cursive" font-size="14" fill="#e8529a">Portfolio</text>
+          </svg>
+          <div>
+            <div class="legend-item"><div class="legend-dot" style="background:#e8529a;"></div> US Stocks — 60%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#b076d4;"></div> International — 25%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#f07cb8;"></div> Bonds — 10%</div>
+            <div class="legend-item"><div class="legend-dot" style="background:#fdd8eb;"></div> REITs — 5%</div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:1rem;">
+          <p>As you get older, gradually shift more into bonds for stability. This is just a starting point — adjust based on your personal risk tolerance! 🌸</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ -->
+<!--  RETIREMENT                                    -->
+<!-- ══════════════════════════════════════════════ -->
+<section id="retirement" class="page-section alt">
+  <div class="deco" style="top:5%; left:1%; animation: floatA 5s ease-in-out infinite;"><svg class="deco-butterfly" viewBox="0 0 100 80"><path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><circle cx="50" cy="40" r="4" fill="#e8529a"/><path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="deco" style="top:6%; right:2%; animation: floatB 5s ease-in-out infinite 1s;"><svg class="deco-bow" viewBox="0 0 180 140"><path d="M20 70 Q10 30 50 20 Q80 15 90 70 Q80 125 50 120 Q10 110 20 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M20 70 Q10 30 50 20 Q80 15 90 70" fill="#fdd8eb" opacity="0.7"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70 Q100 125 130 120 Q170 110 160 70Z" fill="none" stroke="#e8529a" stroke-width="2.5"/><path d="M160 70 Q170 30 130 20 Q100 15 90 70" fill="#fdd8eb" opacity="0.7"/><circle cx="90" cy="70" r="10" fill="#e8529a"/><path d="M85 78 Q70 110 60 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M95 78 Q110 110 120 130" stroke="#e8529a" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg></div>
+  <div class="deco" style="bottom:5%; left:2%; animation: floatB 5s ease-in-out infinite;"><svg class="deco-flower" viewBox="0 0 60 60"><circle cx="30" cy="30" r="8" fill="#e8529a"/><ellipse cx="30" cy="12" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="30" cy="48" rx="7" ry="10" fill="#f9b8d8"/><ellipse cx="12" cy="30" rx="10" ry="7" fill="#f9b8d8"/><ellipse cx="48" cy="30" rx="10" ry="7" fill="#f9b8d8"/><circle cx="30" cy="30" r="5" fill="white"/></svg></div>
+  <div class="deco" style="bottom:5%; right:2%; animation: floatA 6s ease-in-out infinite 2s;"><svg class="deco-butterfly" viewBox="0 0 100 80"><path d="M50 40 Q30 10 10 20 Q0 35 15 45 Q30 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q70 10 90 20 Q100 35 85 45 Q70 55 50 40Z" fill="#f9b8d8" stroke="#e8529a" stroke-width="1.8"/><path d="M50 40 Q35 55 25 70 Q35 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><path d="M50 40 Q65 55 75 70 Q65 65 50 40Z" fill="#f07cb8" stroke="#e8529a" stroke-width="1.5"/><circle cx="50" cy="40" r="4" fill="#e8529a"/><path d="M50 36 Q46 28 44 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M50 36 Q54 28 56 22" stroke="#e8529a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg></div>
+
+  <div class="content-wrap">
+    <h2 class="section-heading">RETIREMENT</h2>
+    <div class="two-col">
+      <!-- Account types -->
+      <div>
+        <div class="content-box" style="margin-bottom:0;">
+          <div class="box-title">Retirement Accounts Explained</div>
+          <div class="account-card">
+            <div class="account-icon">💼</div>
+            <div>
+              <h4>401(k) — Employer Plans</h4>
+              <p>Pre-tax contributions through your employer. Always get the full employer match — it's free money! 2024 limit: $23,000/year.</p>
+              <span class="account-tag">Match your employer match first</span>
+            </div>
+          </div>
+          <div class="account-card">
+            <div class="account-icon">🌺</div>
+            <div>
+              <h4>Roth IRA — Tax-Free Growth</h4>
+              <p>After-tax contributions now, completely tax-free withdrawals in retirement. Best for young women in lower tax brackets. 2024 limit: $7,000/year.</p>
+              <span class="account-tag">Best choice for most young women 💕</span>
+            </div>
+          </div>
+          <div class="account-card">
+            <div class="account-icon">🏦</div>
+            <div>
+              <h4>Traditional IRA</h4>
+              <p>Tax-deductible now, taxed at withdrawal. Good if you expect to be in a lower tax bracket at retirement.</p>
+              <span class="account-tag">Good if income is high now</span>
+            </div>
+          </div>
+          <div class="account-card">
+            <div class="account-icon">💡</div>
+            <div>
+              <h4>HSA — Triple Tax Advantage</h4>
+              <p>Pre-tax in, grows tax-free, tax-free for medical costs. After 65, use for anything. An often-overlooked retirement account!</p>
+              <span class="account-tag">Hidden retirement account ✨</span>
+            </div>
+          </div>
+          <div style="padding: 0 0.5rem;">
+            <ul class="fancy-list" style="margin-top:1rem;">
+              <li>Focus on long-term wealth preservation</li>
+              <li>Long-term financial independence is the goal</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Timeline: start early -->
+      <div class="content-box pink-bg">
+        <div class="box-title">Start Now. Seriously. ⏰</div>
+        <p style="font-size:0.95rem; color:var(--text-body); margin-bottom:1.75rem;">$300/month at 7% return — the age you start changes everything:</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-dot">25</div>
+            <div class="tl-body">
+              <h5>Start at 25 — invest for 40 years</h5>
+              <p>40 years of compounding at 7%</p>
+              <div class="tl-amount">≈ $798,000 at 65 🎉</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot soft">35</div>
+            <div class="tl-body">
+              <h5>Start at 35 — invest for 30 years</h5>
+              <p>30 years of compounding at 7%</p>
+              <div class="tl-amount" style="color:#b076d4;">≈ $378,000 at 65</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-dot soft">45</div>
+            <div class="tl-body">
+              <h5>Start at 45 — invest for 20 years</h5>
+              <p>20 years of compounding at 7%</p>
+              <div class="tl-amount" style="color:#f07cb8;">≈ $163,000 at 65</div>
+            </div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:0.5rem;">
+          <p><strong>Starting at 25 gives you nearly 5× more than starting at 45.</strong> Every year you delay costs tens of thousands of dollars. Your future self will thank you! 🌸</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────────── -->
+<footer>
+  <div class="foot-title">🎀 Invest In Her</div>
+  <p>A Financial Roadmap for Young Women</p>
+  <p style="margin-top:0.4rem; font-size:0.8rem; opacity:0.7;">This site is for educational purposes only and does not constitute financial advice.</p>
+  <ul class="foot-links">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#budgeting">Budgeting</a></li>
+    <li><a href="#investing">Investing</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#retirement">Retirement</a></li>
+  </ul>
+  <p style="margin-top:1.5rem; font-size:0.8rem; opacity:0.6;">© 2026 Invest In Her. Made with 💕</p>
+</footer>
+
+<!-- ── ANIMATIONS & JS ────────────────────────────── -->
+<style>
+@keyframes floatA {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-14px) rotate(2deg); }
+}
+@keyframes floatB {
+  0%, 100% { transform: translateY(0) rotate(3deg); }
+  50% { transform: translateY(-10px) rotate(-1deg); }
+}
+</style>
+
+<script>
+// Compound interest bar chart
+function calcFV(monthly, rate, years) {
+  const r = rate / 12, n = years * 12;
+  return monthly * ((Math.pow(1 + r, n) - 1) / r);
+}
+
+const years = [5, 10, 15, 20, 25, 30];
+const fvs = years.map(y => ({
+  year: y,
+  contrib: 200 * y * 12,
+  total: Math.round(calcFV(200, 0.07, y))
+}));
+const maxVal = Math.max(...fvs.map(d => d.total));
+
+const container = document.getElementById('compoundBars');
+if (container) {
+  fvs.forEach(d => {
+    const totalH = Math.round((d.total / maxVal) * 160);
+    const contribH = Math.round((d.contrib / maxVal) * 160);
+    const growthH = totalH - contribH;
+
+    const col = document.createElement('div');
+    col.className = 'comp-col';
+    col.innerHTML = `
+      <div class="comp-total">$${d.total >= 1000 ? (d.total/1000).toFixed(0)+'k' : d.total}</div>
+      <div class="comp-bar-wrap">
+        <div style="display:flex; flex-direction:column; align-items:center; justify-content:flex-end; height:160px; width:100%;">
+          <div class="comp-bar" style="height:${growthH}px; background:#e8529a; width:52px;"></div>
+          <div class="comp-bar" style="height:${contribH}px; background:#f9b8d8; width:52px; border-radius: 0 0 8px 8px;"></div>
+        </div>
+      </div>
+      <div class="comp-year">Yr ${d.year}</div>
+    `;
+    container.appendChild(col);
+  });
+}
+</script>
+
+</body>
+</html>
